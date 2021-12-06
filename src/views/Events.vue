@@ -29,35 +29,24 @@ export default {
   },
   data () {
     return {
-      events: [
-        {
-          id: 1,
-          eventName: 'Saufen',
-          eventDes: 'Saufen mit den Jungs',
-          eventStart: '2021-12-01T22:00:00',
-          eventLocation: 'Bei Ronnie',
-          eventCoordinate: '1010010231231'
-        },
-        {
-          id: 2,
-          eventName: 'Essen',
-          eventDes: 'Essen mit Papa',
-          eventStart: '2021-12-05T18:00:00',
-          eventLocation: 'Yoko Sushi',
-          eventCoordinate: '1231421211'
-        },
-        {
-          id: 3,
-          eventName: 'Kinoabend',
-          eventDes: 'Filme schauen mit Freundin',
-          eventStart: '2021-12-07T18:00:00',
-          eventLocation: 'Zu Huase',
-          eventCoordinate: '233359011'
-        }
-      ]
+      events: []
     }
+  },
+  mounted () {
+    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/events'
+    const requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    }
+    fetch(endpoint, requestOptions)
+      .then(response => response.json())
+      .then(result => result.forEach(event => {
+        this.events.push(event)
+      }))
+      .catch(error => console.log('error', error))
   }
 }
+
 </script>
 <style scoped>
 
