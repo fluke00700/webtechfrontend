@@ -10,6 +10,15 @@
           <router-link class="nav-link" to="/">Home</router-link>
           <router-link class="nav-link" to="/about">About</router-link>
           <router-link class="nav-link" to="/events">Events</router-link>
+          <div class="Manage Events">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <router-link class="nav-link" to="/create-event">Create Event</router-link>
+              <router-link class="nav-link" to="/delete-event">Delete Event</router-link>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
