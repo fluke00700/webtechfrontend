@@ -1,6 +1,7 @@
 <template>
  <h1> All Events</h1>
   <div class="container-fluid">
+    <events-create-form @created="addEvent"></events-create-form>
     <div class="map-responsive">
       <iframe src="https://maps.google.com/maps?q=Berlin&t=&z=13&ie=UTF8&iwloc=&output=embed" width="900" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
@@ -10,18 +11,20 @@
       <div class="card-header">Event {{event.id}}</div>
       <div class="card-body">
         <h5 class="card-title">{{event.eventName}}</h5>
-        <p class="card-text">Was: {{event.eventDes}} <br> Wann: {{event.eventStart}} <br> Wo: {{event.eventLocation}}
+        <p class="card-text">Was: {{event.eventDes}} <br> Wann: {{event.eventStart}} <br> Wo: {{event.eventLocation}} <br> Koordinate: {{event.eventCoordinate}}
         </p>
       </div>
     </div>
   </div>
+  <event-create-form @created="addEvent"></event-create-form>
 </template>
 
 <script>
 import moment from 'moment'
-
+import EventCreateForm from '@/components/EventCreateForm'
 export default {
   name: 'Events',
+  components: { EventCreateForm },
   filters: {
     formatDate: function (value) {
       return moment(value).format('MM/DD/YYYY hh:mm')

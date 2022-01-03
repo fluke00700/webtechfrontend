@@ -12,7 +12,7 @@
           <router-link class="nav-link" to="/events">Events</router-link>
           <div class="Manage Events">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown button
+              Manage Event
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <router-link class="nav-link" to="/create-event">Create Event</router-link>
