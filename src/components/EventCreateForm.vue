@@ -1,6 +1,6 @@
 <template>
-  <button class="btn btn-success sticky-button" data-bs-toggle="offcanvas" data-bs-target="#events-create-offcanvas" aria-controls="#events-create-offcanvas">
-    <i class="bi bi-event-plus-fill"></i>
+  <button class="btn btn-success sticky-button" data-bs-toggle="offcanvas" data-bs-target="#events-create-offcanvas" aria-controls="offcanvasScrolling">
+  Create Event
   </button>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="events-create-offcanvas" aria-labelledby="offcanvas-label">
     <div class="offcanvas-header">
@@ -10,37 +10,52 @@
     <div class="offcanvas-body">
       <form class="text-start needs-validation" id="events-create-form" novalidate>
         <div class="mb-3">
-          <label for="event-name" class="form-label">Was haben Sie vor?</label>
+          <label for="event-name" class="form-label">Event Name</label>
           <input type="text" class="form-control" id="event-name" v-model="eventName" required>
           <div class="invalid-feedback">
-            Teilen Sie uns mit, was Sie vorhaben.
+            Seems like you haven't filled out the name of the event.
           </div>
         </div>
+        <h4><br></h4>
         <div class="mb-3">
           <label for="event-Des" class="form-label">Event Description</label>
-          <input type="text" class="form-control" id="event-Des" v-model="eventDes">
-        </div>
-        <div class="mb-3">
-          <label for="event-Start" class="form-label">Event starting time</label>
-          <input type="text" class="form-control" id="event-Start" v-model="eventStart" required>
+          <input type="text" class="form-control" id="event-Des" v-model="eventDes" required>
           <div class="invalid-feedback">
-            Teilen Sie uns mit, wo Ihre Aktivität/ Ihr Termin stattfindet.
+            Seems like you haven't filled out the description of the event.
           </div>
         </div>
+        <h4><br></h4>
+        <div class="mb-3">
+          <label for="event-Start" class="form-label">Event Starting Time</label>
+          <input type="text" class="form-control" id="event-Start" v-model="eventStart" required>
+          <div class="invalid-feedback">
+            Seems like you haven't filled out the date and time of the event.
+          </div>
+        </div>
+        <h4><br></h4>
         <div class="mb-3">
           <label for="event-Location" class="form-label">Event Location</label>
           <input type="text" class="form-control" id="event-Location" v-model="eventLocation" required>
           <div class="invalid-feedback">
-            Teilen Sie uns mit, wo Ihre Aktivität/ Ihr Termin stattfindet.
+            Seems like you haven't filled out the location of the event.
           </div>
         </div>
+        <h4><br></h4>
         <div class="mb-3">
-          <label for="event-Coordinate" class="form-label">Event Coordinate</label>
-          <input type="text" class="form-control" id="event-Coordinate" v-model="eventCoordinate" required>
+          <label for="event-Category" class="form-label">Event Category</label>
+          <select id="event-Category" class="form-select" v-model="eventCategory" required>
+            <option value="" selected disabled>Please Choose...</option>
+            <option value="Eating">Eating</option>
+            <option value="Meeting">Meeting</option>
+            <option value="Appointment">Appointment</option>
+            <option value="Chilling">Chilling</option>
+            <option value="Others">Others</option>
+          </select>
           <div class="invalid-feedback">
-            Teilen Sie uns mit, was Sie vorhaben.
+            Seems like you haven't selected the category of the event.
           </div>
         </div>
+        <h4><br></h4>
         <div v-if="this.serverValidationMessages">
           <ul>
             <li v-for="(message, index) in serverValidationMessages" :key="index" style="color: rgba(255,255,255,0)">
@@ -67,7 +82,7 @@ export default {
       eventDes: '',
       eventStart: '',
       eventLocation: '',
-      eventCoordinate: '',
+      eventCategory: '',
       serverValidationMessages: []
     }
   },
@@ -84,7 +99,7 @@ export default {
           eventDes: this.eventDes,
           eventStart: this.eventStart,
           eventLocation: this.eventLocation,
-          eventCoordinate: this.eventCoordinate
+          eventCategory: this.eventCategory
         })
         const requestOptions = {
           method: 'POST',
@@ -121,7 +136,7 @@ export default {
 <style scoped>
 .sticky-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 930px;
   right: 20px;
   padding: 10px 15px;
   border-radius: 30px;
