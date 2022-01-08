@@ -4,6 +4,7 @@
     <h2><br><br></h2>
     <h3>Here you can save your activities on a cloud database.</h3>
     <h2><br><br><br><br></h2>
+    <h3>There are currently {{numberofEvents()}} events hosted in the cloud .</h3>
     <div class="row">
       <div class="col-lg-4">
         <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" class="bi bi-cloud-upload" viewBox="0 0 16 16">
@@ -31,7 +32,7 @@
         </svg>
 
         <h2><br>Stay Organized</h2>
-        <p>With this you're not going to miss any of your activities thanks to our remainder system that will notify you in advance.</p>
+        <p>With this you're not going to miss any of your activities thanks to our Today's events page that will inform you of your activities that will take place today.</p>
       </div>
     </div>
   </div>
@@ -42,6 +43,20 @@
 export default {
   name: 'Home',
   components: {
+  },
+  methods: {
+    numberofEvents () {
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/events/count'
+      const requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      }
+      fetch(endpoint, requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error))
+      return sessionStorage.length
+    }
   }
 }
 </script>

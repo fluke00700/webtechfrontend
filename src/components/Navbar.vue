@@ -11,7 +11,7 @@
           <router-link class="nav-link" to="/about">About</router-link>
           <router-link class="nav-link" to="/events">All Events</router-link>
           <router-link class="nav-link" to="/eventstoday">Today's Events</router-link>
-          </div>
+        </div>
         </div>
       </div>
   </nav>

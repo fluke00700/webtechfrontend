@@ -1,6 +1,8 @@
 <template>
   <button class="btn btn-success sticky-button" data-bs-toggle="offcanvas" data-bs-target="#events-create-offcanvas" aria-controls="offcanvasScrolling">
-  Create Event
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+    </svg>
   </button>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="events-create-offcanvas" aria-labelledby="offcanvas-label">
     <div class="offcanvas-header">
@@ -64,8 +66,8 @@
           </ul>
         </div>
         <div class="mt-5">
-          <button class="btn btn-primary me-3" type="submit" @click.prevent="createEvent">Create</button>
-          <button class="btn btn-danger" type="reset">Reset</button>
+          <button class="btn btn-primary me-3" type="submit"  @click.prevent="createEvent"  >Create</button>
+          <button class="btn btn-danger" type="reset">Clear</button>
         </div>
       </form>
     </div>
@@ -75,6 +77,7 @@
 <script>
 export default {
   name: 'EventCreateForm',
+  components: { },
   data () {
     return {
       id: '',
@@ -115,6 +118,7 @@ export default {
       if (response.ok) {
         this.$emit('created', response.headers.get('location'))
         document.getElementById('close-offcanvas').click()
+        location.reload()
       } else if (response.status === 400) {
         response = await response.json()
         response.errors.forEach(error => {
