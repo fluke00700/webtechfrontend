@@ -21,11 +21,11 @@
         <p></p>
         <p></p>
         <p></p>
-        <router-link class="nav-link" to="/eventseating">Eating Events</router-link>
-        <router-link class="nav-link" to="/eventsmeeting">Meeting Events</router-link>
-        <router-link class="nav-link" to="/eventsappointment">Appointment Events</router-link>
-        <router-link class="nav-link" to="/eventschilling">Chilling Events</router-link>
-        <router-link class="nav-link" to="/eventsothers">Others Events</router-link>
+        <router-link class="nav-link" to="/eventseating"><img src="https://img.icons8.com/material/24/000000/hamburger--v1.png"/>   Eating</router-link>
+        <router-link class="nav-link" to="/eventsmeeting"><img src="https://img.icons8.com/material-rounded/24/000000/user-group-man-woman.png"/>Meeting</router-link>
+        <router-link class="nav-link" to="/eventsappointment"> <img src="https://img.icons8.com/material-outlined/24/000000/calendar--v2.png"/>Appointment</router-link>
+        <router-link class="nav-link" to="/eventschilling"><img src="https://img.icons8.com/material-two-tone/24/000000/beach--v2.png"/>Chilling</router-link>
+        <router-link class="nav-link" to="/eventsothers"><img src="https://img.icons8.com/material-rounded/24/000000/inscription.png"/>Others</router-link>
       </div>
     </div>
   </nav>
