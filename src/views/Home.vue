@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="p-3 mb-2 bg-dark text-white"><h1>Welcome to WasWannWo</h1></div>
+    <div class="p-3 mb-2 bg-dark text-white" style= "max-width: 150rem;" ><h1>Welcome to WasWannWo</h1> </div>
     <img src="@/assets/promote.png" width="400" height="600" />
     <h2></h2>
     <p style="display: none;">

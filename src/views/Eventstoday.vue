@@ -1,6 +1,6 @@
 <template>
   <div class="eventstoday">
-    <div class="p-3 mb-2 bg-dark text-white"><h1>Your events for today ({{currentDate()}}) </h1></div>
+    <div class="p-3 mb-2 bg-dark text-white" style= "max-width: 150rem;"><h1>Your events for today ({{currentDate()}}) </h1></div>
     <TodayEventCard></TodayEventCard>
   </div>
 </template>
