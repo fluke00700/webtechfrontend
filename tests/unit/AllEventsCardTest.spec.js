@@ -1,8 +1,8 @@
 import { mount } from '@vue/test-utils'
 import AllEventsCard from '@/components/AllEventsCard'
 
-describe('Testing PersonsCardList.vue', () => {
-  it('should render a person card for each person', () => {
+describe('Testing AllEventsCard', () => {
+  it('should render a event card for each event', () => {
     // when
     const wrapper = mount(AllEventsCard, {
       propsData: {

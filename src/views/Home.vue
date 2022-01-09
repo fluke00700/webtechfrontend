@@ -8,7 +8,7 @@
     </p>
     <div class="p-3 mb-2 bg-dark text-white" style= "max-width: 150rem;" ></div>
     <div class="embed-responsive embed-responsive-16by9">
-      <iframe style= "max-width: 120rem;"  width="350" height="500" src="https://www.youtube.com/embed/Y9Z2siedS1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe style= "max-width: 120rem;"  width="200" height="350" src="https://www.youtube.com/embed/Y9Z2siedS1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="p-3 mb-2 bg-dark text-white" style= "max-width: 150rem;" ></div>
     <div class="row">
