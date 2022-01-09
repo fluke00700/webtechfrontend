@@ -18,7 +18,6 @@
             Seems like you haven't filled out the name of the event.
           </div>
         </div>
-        <h4><br></h4>
         <div class="mb-3">
           <label for="event-Des" class="form-label">Event Description</label>
           <input type="text" class="form-control" id="event-Des" v-model="eventDes" required>
@@ -26,15 +25,13 @@
             Seems like you haven't filled out the description of the event.
           </div>
         </div>
-        <h4><br></h4>
         <div class="mb-3">
           <label for="event-Start" class="form-label">Event Starting Time</label>
-          <input type="text" class="form-control" id="event-Start" v-model="eventStart" required>
+          <input type="text" class="form-control" id="event-Start" placeholder="YYYY-MM-DDThh:mm:ss" v-model="eventStart" required>
           <div class="invalid-feedback">
-            Seems like you haven't filled out the date and time of the event.
+            Seems like you haven't filled out the date and time of the event. Please make sure to type in the correct format as shown above.
           </div>
         </div>
-        <h4><br></h4>
         <div class="mb-3">
           <label for="event-Location" class="form-label">Event Location</label>
           <input type="text" class="form-control" id="event-Location" v-model="eventLocation" required>
@@ -42,7 +39,6 @@
             Seems like you haven't filled out the location of the event.
           </div>
         </div>
-        <h4><br></h4>
         <div class="mb-3">
           <label for="event-Category" class="form-label">Event Category</label>
           <select id="event-Category" class="form-select" v-model="eventCategory" required>
@@ -57,7 +53,6 @@
             Seems like you haven't selected the category of the event.
           </div>
         </div>
-        <h4><br></h4>
         <div v-if="this.serverValidationMessages">
           <ul>
             <li v-for="(message, index) in serverValidationMessages" :key="index" style="color: rgba(255,255,255,0)">
@@ -83,7 +78,7 @@ export default {
       id: '',
       eventName: '',
       eventDes: '',
-      eventStart: '',
+      eventStart: '2022-12-30T23:59:59',
       eventLocation: '',
       eventCategory: '',
       serverValidationMessages: []

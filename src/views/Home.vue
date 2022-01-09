@@ -1,12 +1,12 @@
 <template>
   <div class="home">
     <div class="p-3 mb-2 bg-dark text-white" style= "max-width: 150rem;" ><h1>Welcome to WasWannWo</h1> </div>
-    <img src="@/assets/promote.png" width="400" height="600" />
+    <img src="@/assets/promote.png"  style="max-width:100%;height:auto;"/>
     <h2></h2>
     <p style="display: none;">
       {{ numberofEvents () }}
     </p>
-    <h2><br><br><br><br></h2>
+    <div class="p-3 mb-2 bg-dark text-white" style= "max-width: 150rem;" ></div>
     <div class="row">
       <div class="col-lg-4">
         <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-cloud-upload" viewBox="0 0 16 16">

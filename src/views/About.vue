@@ -6,3 +6,10 @@
     <p>Backend: https://github.com/fluke00700/webtechwise2021-2022/tree/master<b></b></p>
   </div>
 </template>
+<script>
+export default {
+  components: { },
+  methods: {
+  }
+}
+</script>

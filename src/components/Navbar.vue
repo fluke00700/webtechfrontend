@@ -14,6 +14,20 @@
         </div>
         </div>
       </div>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <router-link class="nav-link" to="/eventseating">Eating Events</router-link>
+        <router-link class="nav-link" to="/eventsmeeting">Meeting Events</router-link>
+        <router-link class="nav-link" to="/eventsappointment">Appointment Events</router-link>
+        <router-link class="nav-link" to="/eventschilling">Chilling Events</router-link>
+        <router-link class="nav-link" to="/eventsothers">Others Events</router-link>
+      </div>
+    </div>
   </nav>
 
 </template>
