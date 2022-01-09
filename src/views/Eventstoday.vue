@@ -1,20 +1,13 @@
 <template>
   <div class="eventstoday">
-    <h1>Your events for {{currentDate()}} </h1>
-    <div class="col" v-for="event in events" :key="event.id">
-      <div class="card text-white bg-dark mb-3" style="max-width: 150rem;">
-        <div class="card-header">Event {{event.id}}</div>
-        <div class="card-body">
-          <h5 class="card-title">{{event.eventName}}</h5>
-          <p class="card-text"><b>What:</b> {{event.eventDes}} <br> <b>When:</b> {{rearrangeDate(event.eventStart)}} <br> <b>Where:</b> {{event.eventLocation}} <br> <b>Category:</b> {{event.eventCategory}}
-          </p>
-        </div>
-      </div>
-    </div>
+    <div class="p-3 mb-2 bg-dark text-white"><h1>Your events for today ({{currentDate()}}) </h1></div>
+    <TodayEventCard></TodayEventCard>
   </div>
 </template>
 <script>
+import TodayEventCard from '@/components/TodayEventCard'
 export default {
+  components: { TodayEventCard },
   data () {
     return {
       events: []
