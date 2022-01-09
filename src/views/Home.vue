@@ -6,6 +6,9 @@
     <p style="display: none;">
       {{ numberofEvents () }}
     </p>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Y9Z2siedS1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <div class="p-3 mb-2 bg-dark text-white" style= "max-width: 150rem;" ></div>
     <div class="row">
       <div class="col-lg-4">
