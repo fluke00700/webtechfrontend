@@ -1,29 +1,14 @@
-# event-frontend
+This Project belongs to Teerapat Thitirungrueang s0575807 WiSe2021-22 for Webtechnology Course HTW Berlin
+Frontend: https://github.com/fluke00700/webtechfrontend
+Backend: https://github.com/fluke00700/webtechwise2021-2022/tree/master
 
-## Project setup
-```
-npm install
-```
+Frontend allows the user to:
+- see all the events 
+- create events by filling out the form
+- see all events that is due on that day(from Backend(Heroku European Sever))
+- see events depending on the chosen category
+- delete events on the fly (one click)
+- see total number of events 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+How to use:
+please take a look at the videos linked on homepage
