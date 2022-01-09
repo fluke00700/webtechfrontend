@@ -40,6 +40,12 @@ export default {
       events: []
     }
   },
+  props: {
+    propevents: {
+      type: Array,
+      required: true
+    }
+  },
   mounted () {
     const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/events'
     const requestOptions = {
